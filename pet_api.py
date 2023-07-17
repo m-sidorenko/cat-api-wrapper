@@ -1,11 +1,11 @@
-from abc import ABCMeta, abstractmethod, abstractproperty
+import abc
 
-class PetApi(ABCMeta):
+class PetApi(abc.ABC):
 
-    @abstractmethod
-    def get_random_image(file_name):
+    @abc.abstractmethod
+    def __init__(self, key):
         pass
 
-    @abstractmethod
-    def printT():
+    @abc.abstractmethod
+    def get_random_image(self, file_name):
         pass
