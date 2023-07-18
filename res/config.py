@@ -1,0 +1,3 @@
+""" write your keys here
+"""
+CAT_API_KEY = "live_6qtIO4MDJG3olE7jYI3fP7VAJXRcqJGGvr8IBB0I7KOMTBq6SvMGSkI7X4YG4NoW"
