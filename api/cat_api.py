@@ -3,6 +3,7 @@ from PIL import Image
 import requests
 import json
 
+
 class CatApi(PetApi):
     """Class - wrapper for the cat API
     """
@@ -23,12 +24,12 @@ class CatApi(PetApi):
             file_name (str): the name of the file .jpg that will be saved
         """
         url = 'https://api.thecatapi.com/v1/images/search'
-        response = requests.get(url, stream= True)
-        json_respose = json.loads(response.text)
-        image_link = json_respose[0]["url"]
+        response = requests.get(url, stream=True)
+        json_response = json.loads(response.text)
+        image_link = json_response[0]["url"]
         image = requests.get(image_link).content
 
-        file_name+='.jpg'
+        file_name += '.jpg'
         with open(file_name, 'wb') as f:
             f.write(image)
 

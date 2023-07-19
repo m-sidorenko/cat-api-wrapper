@@ -1,11 +1,13 @@
 import abc
 
+
 class PetApi(abc.ABC):
     """Abstract class for dog API and cat API
 
     Args:
         abc (_type_): system abstract parent-class
     """
+
     @abc.abstractmethod
     def __init__(self, key):
         pass
